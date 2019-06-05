@@ -3,6 +3,7 @@ package com.agentapp;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class ServerAgent {
 
@@ -14,6 +15,7 @@ public class ServerAgent {
     private BufferedWriter outAgent;
     private BufferedWriter outClient;
     private boolean exit;
+    private static Logger logger = Logger.getLogger(ServerAgent.class.getName());
 
     public ServerAgent(UserAgent userAgent, UserHandler userHandler, Service service) {
         this.userAgent = userAgent;
@@ -27,8 +29,10 @@ public class ServerAgent {
             outAgent = userAgent.getOut();
             outClient = serverClient.getUserClient().getOut();
 
-            outClient.write("К вам подключился агент : " + userAgent.getName());
-            outAgent.write(serverClient.getUserClient().getMemoryMessage().toString());
+            outClient.write("К вам подключился агент : " + userAgent.getName()+ "\n");
+            outClient.flush();
+            outAgent.write(serverClient.getUserClient().getMemoryMessage().toString() + "\n");
+            outAgent.flush();
 
             while (!userAgent.getSocket().isClosed() && !exit) {
                 String message = in.readLine();
@@ -36,18 +40,19 @@ public class ServerAgent {
                 switch (message) {
                     case "/exit": {
                         exit = true;
-                        ServerLog.infoLog(userAgent.getName() + "exit");
+                        logger.info(userAgent.getName() + "exit");
                     }
                     break;
                     case "/leave": {
                         exit = true;
-                        ServerLog.infoLog(userAgent.getName() + "leave");
+                        logger.info(userAgent.getName() + "leave");
                     }
                     break;
                     default: {
-                        if (serverClient != null) {
-                            outClient.write("agent " + userAgent.getName() + " - " + message);
-                        }
+
+                        outClient.write("agent " + userAgent.getName() + " -> " + message + "\n");
+                        outClient.flush();
+
                     }
                     break;
                 }

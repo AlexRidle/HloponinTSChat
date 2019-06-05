@@ -4,12 +4,14 @@ import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.logging.Logger;
 
 public class UserHandler implements Runnable {
     private Socket socket;
     private Service service;
     private BufferedReader in;
     private BufferedWriter out;
+    private static Logger logger = Logger.getLogger(UserHandler.class.getName());
 
 
     UserHandler(Socket socket, Service service) throws IOException {
@@ -26,10 +28,11 @@ public class UserHandler implements Runnable {
         if (map.get("type").equalsIgnoreCase(Type.CLIENT.toString())) {
             name = map.get("name");
             service.newClient(this, name, in, out);
-            ServerLog.infoLog("New client : " + name);
+            logger.info("New client : " + name);
         } else {
             name = map.get("name");
             service.newAgent(this, name, in, out);
+            logger.info("New agent : " + name);
         }
 
     }
