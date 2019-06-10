@@ -3,14 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-
+    <display-name>Console Chat</display-name>
+    <welcome-file-list>
+        <welcome-file>formStart.html</welcome-file>
+    </welcome-file-list>
     <servlet>
-        <servlet-name>MainServlet</servlet-name>
-        <servlet-class>MainServlet</servlet-class>
+        <servlet-name>ServletClient</servlet-name>
+        <servlet-class>ServletClient</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MainServlet</servlet-name>
-        <url-pattern>/mainservlet</url-pattern>
+        <servlet-name>ServletClient</servlet-name>
+        <url-pattern>/servletclient</url-pattern>
     </servlet-mapping>
 
 </web-app>

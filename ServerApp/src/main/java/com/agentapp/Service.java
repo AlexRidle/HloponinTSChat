@@ -65,17 +65,6 @@ public class Service {
         return null;
     }
 
-    public synchronized void waited() {
-        while (!wait) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-        }
-    }
-
     public synchronized void terminate() {
         wait = true;
         notify();
