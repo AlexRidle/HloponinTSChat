@@ -9,10 +9,12 @@
         <module name="WebClient" />
         <module name="ClientApp" />
         <module name="ServerApp" />
+        <module name="ClientWeb" />
         <module name="ClientAgentApp4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ClientWeb" target="1.5" />
       <module name="touchSoft" target="1.7" />
       <module name="touschSoft" target="1.8" />
     </bytecodeTargetLevel>

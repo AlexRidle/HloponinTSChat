@@ -10,6 +10,7 @@ public class Service {
 
     private Queue<ServerAgent> agents;
     private static Logger logger = Logger.getLogger(Service.class.getName());
+    private boolean wait;
 
 
     public Service() {
@@ -34,6 +35,18 @@ public class Service {
         serverClient.searchAgent();
     }
 
+    public void removeAgent(ServerClient serverClient){
+        ServerAgent serverAgent = serverClient.getServerAgent();
+        agents.add(serverAgent);
+        serverAgent.setLeave(true);
+        serverClient.setServerAgent(null);
+    }
+    public void removeClient(ServerAgent serverAgent){
+        ServerClient serverClient = serverAgent.getServerClient();
+        serverClient.setLeave(true);
+
+    }
+
     public void connect(ServerClient serverClient) {
         Runnable runnable = () -> {
             ServerAgent serverAgent = getAgent();
@@ -48,6 +61,23 @@ public class Service {
     private ServerAgent getAgent() {
         if (agents.size() > 0) {
             return agents.poll();
-        }return null;
+        }
+        return null;
+    }
+
+    public synchronized void waited() {
+        while (!wait) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public synchronized void terminate() {
+        wait = true;
+        notify();
     }
 }

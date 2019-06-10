@@ -60,6 +60,7 @@ public class Send implements Runnable {
         if (!socket.isClosed()) {
             try {
                 socket.close();
+                System.exit(0);
             } catch (IOException e) {
                 System.out.println("Error closing socket");
                 e.printStackTrace();

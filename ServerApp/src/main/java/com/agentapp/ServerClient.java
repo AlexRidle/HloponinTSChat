@@ -11,9 +11,10 @@ public class ServerClient {
     private BufferedReader in;
     private BufferedWriter out;
     private boolean exit;
+    private boolean leave;
+
     private ServerAgent serverAgent;
     private static Logger logger = Logger.getLogger(ServerClient.class.getName());
-
     public ServerClient(UserClient userClient, UserHandler userHandler, Service service) {
         this.userClient = userClient;
         this.userHandler = userHandler;
@@ -24,17 +25,21 @@ public class ServerClient {
         try {
             in = userClient.getIn();
             out = userClient.getOut();
-            while (!userClient.getSocket().isClosed()) {
+            while (!userClient.getSocket().isClosed()&& !exit) {
                 String message = in.readLine();
                 if (message.equals("/exit")) {
                     logger.info(String.format("Client : \"%s\" exit", userClient.getName()));
-                    break;
+                    exit=true;
                 } else {
                     userClient.addMessage(message + " -- " + userClient.getName());
                     out.write("Поиск свободных агентов...\n");
                     out.flush();
                     service.connect(this);
                     talk();
+                    if(leave){
+                        leave = false;
+                        service.removeAgent(this);
+                    }
                 }
             }
 
@@ -43,10 +48,14 @@ public class ServerClient {
         }
     }
 
+    public ServerAgent getServerAgent() {
+        return serverAgent;
+    }
+
     public void talk() {
         try {
             in = userClient.getIn();
-            while (!userClient.getSocket().isClosed() && !exit) {
+            while (!userClient.getSocket().isClosed() && !exit && !leave) {
                 String message = in.readLine();
 
                 switch (message) {
@@ -56,7 +65,7 @@ public class ServerClient {
                     }
                     break;
                     case "/leave": {
-                        exit = true;
+                        leave = true;
                         logger.info(userClient.getName() + "leave");
                     }
                     break;
@@ -82,6 +91,10 @@ public class ServerClient {
 
     public void setServerAgent(ServerAgent serverAgent) {
         this.serverAgent = serverAgent;
+    }
+
+    public void setLeave(boolean leave) {
+        this.leave = leave;
     }
 }
 

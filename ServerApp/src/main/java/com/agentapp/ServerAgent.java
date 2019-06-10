@@ -15,6 +15,7 @@ public class ServerAgent {
     private BufferedWriter outAgent;
     private BufferedWriter outClient;
     private boolean exit;
+    private boolean leave;
     private static Logger logger = Logger.getLogger(ServerAgent.class.getName());
 
     public ServerAgent(UserAgent userAgent, UserHandler userHandler, Service service) {
@@ -23,18 +24,28 @@ public class ServerAgent {
         this.service = service;
     }
 
+    public ServerClient getServerClient() {
+        return serverClient;
+    }
+
+    public void setLeave(boolean leave) {
+        this.leave = leave;
+    }
+
     public void talk() {
         try {
             in = userAgent.getIn();
             outAgent = userAgent.getOut();
             outClient = serverClient.getUserClient().getOut();
+            leave = false;
+            exit = false;
 
             outClient.write("К вам подключился агент : " + userAgent.getName()+ "\n");
             outClient.flush();
             outAgent.write(serverClient.getUserClient().getMemoryMessage().toString() + "\n");
             outAgent.flush();
 
-            while (!userAgent.getSocket().isClosed() && !exit) {
+            while (!userAgent.getSocket().isClosed() && !exit && !leave) {
                 String message = in.readLine();
 
                 switch (message) {
@@ -44,19 +55,24 @@ public class ServerAgent {
                     }
                     break;
                     case "/leave": {
-                        exit = true;
+                        leave = true;
                         logger.info(userAgent.getName() + "leave");
                     }
                     break;
                     default: {
-
                         outClient.write("agent " + userAgent.getName() + " -> " + message + "\n");
                         outClient.flush();
-
                     }
                     break;
                 }
 
+            }
+            service.removeClient(this);
+            if(exit){
+                service.terminate();
+            }
+            if (leave){
+                service.addAgents(this);
             }
 
         } catch (IOException e) {
