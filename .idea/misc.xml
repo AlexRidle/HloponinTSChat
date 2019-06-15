@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ClientWeb" />
+    <file type="web" url="file://$PROJECT_DIR$/WebApp" />
     <file type="web" url="file://$PROJECT_DIR$/WebClient" />
   </component>
   <component name="MavenProjectsManager">
@@ -10,12 +11,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/ClientWeb/pom.xml" />
-        <option value="$PROJECT_DIR$/WebClient/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">

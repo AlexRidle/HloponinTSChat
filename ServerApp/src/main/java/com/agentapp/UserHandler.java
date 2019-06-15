@@ -3,7 +3,6 @@ package com.agentapp;
 import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.logging.Logger;
 
 public class UserHandler implements Runnable {
@@ -17,8 +16,8 @@ public class UserHandler implements Runnable {
     UserHandler(Socket socket, Service service) throws IOException {
         this.socket = socket;
         this.service = service;
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+        in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
+        out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(),"UTF-8"));
 
     }
 
@@ -40,23 +39,23 @@ public class UserHandler implements Runnable {
     private String register(BufferedReader in) {
         String line;
         StringBuilder sb = new StringBuilder();
-        send("Для регистрации введите пожалуйста /register", out);
+        send("Please write : /register", out);
 
         try {
             line = in.readLine();
             line.equals("/register");
             while (!line.equals("/register")) {
-                send("Попробуйте пожалуйста еще раз /register", out);
+                send("Try again, write : /register", out);
                 line = in.readLine();
             }
-            send("Введите ваш тип : вы agent или client", out);
+            send("Please write your type : you are agent or client", out);
             line = in.readLine();
             while (!line.equalsIgnoreCase("agent") && !line.equalsIgnoreCase("client")) {
-                send("Попробуйте еще раз пожалуйста : вы agent или client?", out);
+                send("Try again, write : you are agent or client", out);
                 line = in.readLine();
             }
             sb.append(line + " ");
-            send("Введите ваше имя", out);
+            send("Please, enter your name...", out);
             line = in.readLine();
             sb.append(line);
 

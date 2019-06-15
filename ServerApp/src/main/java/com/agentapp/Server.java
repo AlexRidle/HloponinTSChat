@@ -46,6 +46,7 @@ public class Server {
         Socket socket = null;
         try {
             socket = serverSocket.accept();
+            System.out.println("socket accept");
         } catch (IOException e) {
             logger.info("Connect failed with client");
             System.out.println(e.getStackTrace());

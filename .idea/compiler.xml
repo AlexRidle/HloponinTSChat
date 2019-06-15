@@ -6,15 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="WebClient" />
-        <module name="ClientApp" />
         <module name="ServerApp" />
-        <module name="ClientWeb" />
-        <module name="ClientAgentApp4" />
+        <module name="ClientApp" />
+        <module name="WebApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ClientWeb" target="1.8" />
       <module name="touchSoft" target="1.7" />
       <module name="touschSoft" target="1.8" />
     </bytecodeTargetLevel>
