@@ -7,58 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c552c0-0ea0-400f-9cfe-b35507816b82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/coders/MessageDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ClientWeb1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ClientWeb1_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/src/main/java/servlets/MainServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/src/main/webapp/chat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/src/main/webapp/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/ClientWeb.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/src/ServiceWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/src/ServletClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/web/formChat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientWeb/web/formStart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/META-INF/ServerApp.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Service.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/UserHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/classes/META-INF/ClientWeb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/classes/ServiceWeb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/classes/ServletClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/classes/logic/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/classes/logic/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/formChat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/formStart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ClientWeb_war_exploded/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientWeb/META-INF/ClientWeb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientWeb/ServiceWeb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientWeb/ServletClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientWeb/logic/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientWeb/logic/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientApp/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientApp/Resive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientApp/Send.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/TouchSoftLabs.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main/ClientAgentStart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main/ServerStart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ServerApp/Chat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ServerApp/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ServerApp/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ServerApp/UserHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/ServerLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/main/java/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/main/java/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,10 +42,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="352">
+              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="372">
+              <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,9 +66,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
+        <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/message/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="435">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,17 +98,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp">
+        <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="414">
+              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="89" column="16" lean-forward="true" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/servlets/MainServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -135,8 +134,10 @@
       <list>
         <option value="Enum" />
         <option value="HTML File" />
-        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -151,12 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserAgent.java" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserClient.java" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/MyListner.java" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/MyListener.java" />
-        <option value="$PROJECT_DIR$/WebClient/pom.xml" />
-        <option value="$PROJECT_DIR$/WebClient/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/ClientWeb/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/ClientWeb/src/ClientWem.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/ClientWeb.java" />
@@ -183,7 +178,6 @@
         <option value="$PROJECT_DIR$/ClientWeb/web/WEB-INF/formChat.jsp" />
         <option value="$PROJECT_DIR$/ClientWeb/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/ClientWeb/web/formChat.jsp" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/ServletClient.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/main/java/WebService.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/main/WebService.java" />
@@ -198,12 +192,25 @@
         <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/coders/MessageDecoder.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java" />
+        <option value="$PROJECT_DIR$/ServerApp/pom.xml" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/message/Message.java" />
-        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/save.jsp" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/chat.css" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/chat.js" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/java/servlets/MainServlet.java" />
+        <option value="$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -232,14 +239,19 @@
           <item name="WebApp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WebApp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="tomcat7" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="821" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -261,37 +273,37 @@
             <path>
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clientapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agentapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
@@ -361,6 +373,15 @@
               <item name="WebApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -372,6 +393,10 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -380,22 +405,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ClientWeb/web" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp" />
       <recent name="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ClientWeb/web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -410,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientAgentStart">
+  <component name="RunManager" selected="Application.ServerStart">
     <configuration name="ClientAgentStart" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.clientapp.ClientAgentStart" />
       <module name="ClientApp" />
@@ -443,8 +470,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientAgentStart" />
         <item itemvalue="Application.ServerStart" />
+        <item itemvalue="Application.ClientAgentStart" />
       </list>
     </recent_temporary>
   </component>
@@ -463,7 +490,7 @@
       <workItem from="1560161361816" duration="14692000" />
       <workItem from="1560421200724" duration="10887000" />
       <workItem from="1560606334354" duration="3692000" />
-      <workItem from="1560616427995" duration="1166000" />
+      <workItem from="1560616427995" duration="25280000" />
     </task>
     <task id="LOCAL-00001" summary="Create modules&#10;add Type">
       <created>1559649127795</created>
@@ -483,10 +510,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35688000" />
+    <option name="totallyTimeSpent" value="59802000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -494,7 +521,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.67951804" visible="true" weight="0.21530758" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.67951804" visible="true" weight="0.1874106" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Web" order="7" sideWeight="0.32048193" side_tool="true" weight="0.21244635" />
       <window_info anchor="bottom" id="Terminal" order="0" />
@@ -503,7 +530,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.40963855" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -575,32 +602,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClientWeb/src/logic/Model.java" />
-    <entry file="file://$PROJECT_DIR$/ClientWeb/web/register.jsp" />
-    <entry file="file://$PROJECT_DIR$/ClientWeb/ClientWeb.iml" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="552" column="22" selection-start-line="552" selection-start-column="22" selection-end-line="552" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientWeb/web/formStart.html" />
-    <entry file="file://$PROJECT_DIR$/ClientWeb/web/formChat.html" />
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -681,13 +682,6 @@
             <element signature="e#2596#2597#0" expanded="true" />
             <element signature="e#2644#2645#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -782,42 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/message/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -830,12 +788,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java">
+    <entry file="file://$PROJECT_DIR$/ServerApp/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="81" selection-start-line="12" selection-end-line="13" />
+        <state relative-caret-position="330">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/target/tomcat/work/Tomcat/localhost/web/org/apache/jsp/index_jsp.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <folding>
+            <element signature="e#0#5681#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -843,27 +827,110 @@
     <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="16794" column="4" selection-start-line="16794" selection-start-column="4" selection-end-line="16794" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/servlets/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/net/SocketOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="89" column="16" lean-forward="true" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="12" column="81" selection-start-line="12" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/message/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -872,10 +939,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="352">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>

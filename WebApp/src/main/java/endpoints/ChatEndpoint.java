@@ -2,52 +2,66 @@ package endpoints;
 
 import coders.MessageDecoder;
 import coders.MessageEncoder;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+import connect.Connect;
 import message.Message;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.logging.Logger;
 
 @ServerEndpoint(value = "/chat", decoders = {MessageDecoder.class}, encoders = {MessageEncoder.class})
 public class ChatEndpoint {
 
     private static Logger logger = Logger.getLogger("WebApp");
-
+    private boolean applyconnect = false;
     private Session session = null;
-    private static List<javax.websocket.Session> sessionList = new LinkedList<>();
-    @Getter
-    @Setter
+    private Connect connect;
 
+
+    // 1. Пользователь производит соединение
     @OnOpen
-    public void onOpen(Session session){
+    public void onOpen(Session session) {
         this.session = session;
-        sessionList.add(session);
     }
 
+    // Закрытие сокдинения
     @OnClose
-    public void onClose(Session session){
-        sessionList.remove(session);
+    public void onClose(Session session) {
     }
 
+    // Ошибка
     @OnError
-    public void onError(Session session, Throwable throwable){
+    public void onError(Session session, Throwable throwable) {
         throwable.printStackTrace();
     }
 
+    // Передаем сообщение в сокет на сервер
     @OnMessage
-    public void onMessage(Session session, Message msg){
-        sessionList.forEach(s->{
-            try {
-                s.getBasicRemote().sendObject(msg);
-            } catch (IOException | EncodeException e) {
-                e.printStackTrace();
-            }
-        });
+    public void onMessage(Session session, Message message) {
+        try {
+            if (applyconnect) {
+                connect.send(message.toString());
+                session.getBasicRemote().sendObject(message);
+            } else register(message);
+        } catch (IOException | EncodeException e) {
+            logger.info(e.getMessage());
+        }
+    }
+
+    public void sendEndpoint(Message message) {
+        try {
+            session.getBasicRemote().sendObject(message);
+        } catch (IOException | EncodeException e) {
+            logger.info(e.getMessage());
+        }
+    }
+    // Регистрируем нового пользователя, передаем этот chatEndpoint и текст сообщения
+    private void register(Message message) throws IOException {
+        connect = new Connect(this, message.getText());
+        new Thread(connect).start();
+        connect.send(message.toString());
+        applyconnect = true;
     }
 
 }

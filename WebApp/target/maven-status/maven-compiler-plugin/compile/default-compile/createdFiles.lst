@@ -1,0 +1,6 @@
+coders/MessageDecoder.class
+endpoints/ChatEndpoint.class
+coders/MessageEncoder.class
+message/Message.class
+servlets/MainServlet.class
+connect/Connect.class

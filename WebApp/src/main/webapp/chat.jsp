@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<%--    <link rel="stylesheet" href="chat.css" />--%>
     <style>
         .chatbox {
             /*display: none;*/
@@ -42,12 +41,14 @@
         }
 
     </style>
+
+
 </head>
 <body>
 <h1>ChatBox</h1>
 
-<div class="start">
-    <input type="text" class="username" placeholder="Enter you name...">
+<div class="startbox">
+<%--    <input type="text" class="username" placeholder="Enter you name...">--%>
     <button id="start"> start</button>
 </div>
 
@@ -55,6 +56,7 @@
     <textarea class="msg"></textarea>
     <div class="messages"></div>
 </div>
+<%--<script src="chat.js"></script>--%>
 <script>
     let chatUnit = {
         init() {
@@ -82,13 +84,15 @@
 
         send(){ // Вызывает метод sendMessage и передает в него параметры
             this.sendMessage({
-                name: this.name,
+                // name: this.name,
                 text: this.msgTextArea.value
             });
         },
 
-        onOpenSocket() {
-
+        sendMessage() { // Отправляет сообщение
+            // this.onMessage({name: "I'm", text: msg.text });
+            this.msgTextArea.value = "";
+            this.ws.send(JSON.stringify(msg));
         },
 
         onMessage(msg) { // Получает сообщение и выводит его на веб
@@ -109,26 +113,30 @@
             this.chatBoxContainer.appendChild(msgBlock);
         },
 
-        onClose() {
-
-        },
-
-        sendMessage() { // Отправляет сообщение
-            this.onMessage({name: "I'm", text: msg.text });
-            this.msgTextArea.value = "";
-            this.ws.send(JSON.stringify(msg));
-        },
-
         openSocket() {
             this.ws = new WebSocket("ws://localhost:8080/web/chat"); // По нажатию открыли сокет
             this.ws.onopen = () => this.onOpenSocket();
             this.ws.onmessage = (ev) => this.onMessage(JSON.parse(ev.data));
             this.ws.onclose = () => this.onClose();
 
-            this.name = this.nameInput.value;
+            // this.name = this.nameInput.value;
             this.startBox.style.display = "none"; // После соединения прячем кнопку
             this.chatBox.style.display = "block"; // После соединения непрячем chatbox
         },
+
+        onOpenSocket() {
+
+        },
+
+
+
+        onClose() {
+
+        },
+
+
+
+
 
     };
 

@@ -1,22 +1,39 @@
 package message;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@AllArgsConstructor
-@NoArgsConstructor
 public class Message {
-    @Getter
-    @Setter
+
+    // Имя передаюзего и сообщение
     private String name;
-    @Getter
-    @Setter
     private String text;
+
+    public Message(String msg) {
+        text = msg;
+    }
+
+    public Message(String name, String text) {
+        this.name = name;
+        this.text = text;
+    }
+
 
     @Override
     public String toString() {
         return name + " : " + text;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

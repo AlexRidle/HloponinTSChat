@@ -1,0 +1,34 @@
+.chatbox {
+    display: none;
+}
+
+.messages {
+    background-color: cadetblue;
+    width: 500px;
+    padding: 15px;
+}
+
+.messages .msg {
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.messages .msg .from {
+    background-color: antiquewhite;
+    line-height: 30px;
+    text-align: center;
+}
+
+.messages .msg .text {
+    padding: 10px;
+}
+
+textarea.msg {
+    width: 530px;
+    padding: 15px;
+    resize: none;
+    border: none;
+    box-shadow: 2px 2px 5px 0 inset;
+}
