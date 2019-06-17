@@ -19,7 +19,7 @@ public class ChatEndpoint {
     private Connect connect;
 
 
-    // 1. Пользователь производит соединение
+    // Пользователь производит соединение
     @OnOpen
     public void onOpen(Session session) {
         this.session = session;
@@ -38,29 +38,28 @@ public class ChatEndpoint {
 
     // Передаем сообщение в сокет на сервер
     @OnMessage
-    public void onMessage(Session session, Message message) {
+    public void onMessage(Session session, String message) {
         try {
             if (applyconnect) {
-                connect.send(message.toString());
-                session.getBasicRemote().sendObject(message);
-            } else register(message);
-        } catch (IOException | EncodeException e) {
+                connect.send(message);
+//                session.getBasicRemote().sendText(message);
+            } else register();
+        } catch (IOException e) {
             logger.info(e.getMessage());
         }
     }
 
-    public void sendEndpoint(Message message) {
+    public void sendEndpoint(String message) {
         try {
-            session.getBasicRemote().sendObject(message);
-        } catch (IOException | EncodeException e) {
+            session.getBasicRemote().sendText(message);
+        } catch (IOException e) {
             logger.info(e.getMessage());
         }
     }
     // Регистрируем нового пользователя, передаем этот chatEndpoint и текст сообщения
-    private void register(Message message) throws IOException {
-        connect = new Connect(this, message.getText());
-        new Thread(connect).start();
-        connect.send(message.toString());
+    private void register() throws IOException {
+        connect = new Connect(this, logger);
+        connect.start();
         applyconnect = true;
     }
 

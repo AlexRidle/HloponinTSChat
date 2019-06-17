@@ -22,11 +22,11 @@
             overflow: hidden;
         }
 
-        .messages .msg .from {
-            background-color: antiquewhite;
-            line-height: 30px;
-            text-align: center;
-        }
+        /*.messages .msg .from {*/
+        /*    background-color: antiquewhite;*/
+        /*    line-height: 30px;*/
+        /*    text-align: center;*/
+        /*}*/
 
         .messages .msg .text {
             padding: 10px;
@@ -41,8 +41,6 @@
         }
 
     </style>
-
-
 </head>
 <body>
 <h1>ChatBox</h1>
@@ -63,7 +61,7 @@
             this.startBox = document.querySelector(".startbox"); // Инициализация класса start
             this.chatBox = document.querySelector(".chatbox"); // Инициализация класса chatbox
 
-            this.nameInput = this.startBox.querySelector("input");
+            // this.nameInput = this.startBox.querySelector("input");
             this.statrButton = this.startBox.querySelector("button"); // Инициализация кнопки
 
             this.msgTextArea = this.chatBox.querySelector("textarea"); // Инициализация textarea
@@ -89,25 +87,26 @@
             });
         },
 
-        sendMessage() { // Отправляет сообщение
+        sendMessage(msg) { // Отправляет сообщение
             // this.onMessage({name: "I'm", text: msg.text });
             this.msgTextArea.value = "";
-            this.ws.send(JSON.stringify(msg));
+            this.ws.send(msg);
         },
 
         onMessage(msg) { // Получает сообщение и выводит его на веб
             let msgBlock = document.createElement("div");
             msgBlock.className = "msg";
 
-            let fromBlock = document.createElement("div");
-            fromBlock.className = "from";
-            fromBlock.innerText = msg.name;
+            // let fromBlock = document.createElement("div");
+            // fromBlock.className = "from";
+            // fromBlock.innerText = msg.name;
 
             let textBlock = document.createElement("div");
             textBlock.className = "text";
-            textBlock.innerText = msg.text;
+            textBlock.innerText = msg;
+            // textBlock.innerText = msg.text;
 
-            msgBlock.appendChild(fromBlock);
+            // msgBlock.appendChild(fromBlock);
             msgBlock.appendChild(textBlock);
 
             this.chatBoxContainer.appendChild(msgBlock);
@@ -116,7 +115,9 @@
         openSocket() {
             this.ws = new WebSocket("ws://localhost:8080/web/chat"); // По нажатию открыли сокет
             this.ws.onopen = () => this.onOpenSocket();
-            this.ws.onmessage = (ev) => this.onMessage(JSON.parse(ev.data));
+
+            // this.ws.onmessage = (ev) => this.onMessage(JSON.parse(ev.data));
+            this.ws.onmessage = (ev) => this.onMessage();
             this.ws.onclose = () => this.onClose();
 
             // this.name = this.nameInput.value;
@@ -128,16 +129,9 @@
 
         },
 
-
-
         onClose() {
 
         },
-
-
-
-
-
     };
 
     window.addEventListener("load", ev => chatUnit.init()); // ? При любом событии, при загрузке запускать метод init
