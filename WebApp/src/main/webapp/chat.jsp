@@ -50,7 +50,7 @@
 <script>
     let chatUnit = {
         init() {
-            this.startBox = document.querySelector(".startbox"); // Инициализация класса start
+            this.startBox = document.querySelector(".startbox"); // Инициализация класса startbox
             this.chatBox = document.querySelector(".chatbox"); // Инициализация класса chatbox
 
             this.statrButton = this.startBox.querySelector("button"); // Инициализация кнопки
@@ -66,13 +66,13 @@
             this.msgTextArea.addEventListener("keyup", ev => {
                 if (ev.ctrlKey && ev.keyCode === 13) {
                     ev.preventDefault();
-                    this.send(this.msgTextArea.value);
+                    this.send();
                 }
             }); // При нажатии на кнопку ctrl передаем в msgTextArea value
         },
 
         send(){ // Вызывает метод sendMessage и передает в него параметры
-            this.sendMessage( this.msgTextArea.value);
+            this.sendMessage(this.msgTextArea.value);
         },
 
         sendMessage(msg) { // Отправляет сообщение

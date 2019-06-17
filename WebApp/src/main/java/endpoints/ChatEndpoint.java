@@ -41,7 +41,6 @@ public class ChatEndpoint {
         try {
             if (applyconnect) {
                 connect.send(message);
-                System.out.println(message + " --------------------------------------------");
             } else register();
         } catch (IOException e) {
             logger.info(e.getMessage());
