@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-<h1>ChatBox</h1>
+<h1>WebApplication</h1>
 
 <div class="startbox">
     <button id="start"> start</button>

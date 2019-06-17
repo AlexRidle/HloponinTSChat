@@ -54,11 +54,11 @@ public class ServerAgent {
                         logger.info(userAgent.getName() + " exit");
                     }
                     break;
-                    case "/leave": {
-                        leave = true;
-                        logger.info(userAgent.getName() + " leave");
-                    }
-                    break;
+//                    case "/leave": {
+//                        leave = true;
+//                        logger.info(userAgent.getName() + " leave");
+//                    }
+//                    break;
                     default: {
                         outClient.write("agent " + userAgent.getName() + " -> " + message + "\n");
                         outClient.flush();
