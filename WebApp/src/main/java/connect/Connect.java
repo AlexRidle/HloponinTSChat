@@ -17,8 +17,6 @@ public class Connect extends Thread {
     private BufferedReader in;
     private BufferedWriter out;
     private ChatEndpoint chatEndpoint;
-    private String name;
-    private String message;
 
     public Connect(ChatEndpoint chatEndpoint, Logger logger) throws IOException {
         this.chatEndpoint = chatEndpoint;
@@ -32,17 +30,15 @@ public class Connect extends Thread {
 
     @Override
     public void run() {
-        Message message;
-        String msg;
+        String message;
         while (true) {
             try {
-                msg = in.readLine();
-                if (msg.equals("/exit")) {
+                message = in.readLine();
+                if (message.equals("/exit")) {
                     close();
                     break;
                 }
-//                message = new Message(msg);
-                chatEndpoint.sendEndpoint(msg);
+                chatEndpoint.sendEndpoint(message);
             } catch (IOException e) {
                 logger.info(e.getMessage());
             }
@@ -60,7 +56,7 @@ public class Connect extends Thread {
 
 
     private void close() {
-        logger.info("close this : " + name);
+        logger.info("close this : " + chatEndpoint);
         try {
             if (!socket.isClosed()) {
                 socket.close();

@@ -46,7 +46,6 @@
 <h1>ChatBox</h1>
 
 <div class="startbox">
-<%--    <input type="text" class="username" placeholder="Enter you name...">--%>
     <button id="start"> start</button>
 </div>
 
@@ -54,14 +53,12 @@
     <textarea class="msg"></textarea>
     <div class="messages"></div>
 </div>
-<%--<script src="chat.js"></script>--%>
 <script>
     let chatUnit = {
         init() {
             this.startBox = document.querySelector(".startbox"); // Инициализация класса start
             this.chatBox = document.querySelector(".chatbox"); // Инициализация класса chatbox
 
-            // this.nameInput = this.startBox.querySelector("input");
             this.statrButton = this.startBox.querySelector("button"); // Инициализация кнопки
 
             this.msgTextArea = this.chatBox.querySelector("textarea"); // Инициализация textarea
@@ -81,14 +78,11 @@
         },
 
         send(){ // Вызывает метод sendMessage и передает в него параметры
-            this.sendMessage({
-                // name: this.name,
-                text: this.msgTextArea.value
-            });
+            this.sendMessage( this.msgTextArea.value);
+
         },
 
         sendMessage(msg) { // Отправляет сообщение
-            // this.onMessage({name: "I'm", text: msg.text });
             this.msgTextArea.value = "";
             this.ws.send(msg);
         },
@@ -97,30 +91,22 @@
             let msgBlock = document.createElement("div");
             msgBlock.className = "msg";
 
-            // let fromBlock = document.createElement("div");
-            // fromBlock.className = "from";
-            // fromBlock.innerText = msg.name;
 
             let textBlock = document.createElement("div");
             textBlock.className = "text";
             textBlock.innerText = msg;
-            // textBlock.innerText = msg.text;
 
-            // msgBlock.appendChild(fromBlock);
             msgBlock.appendChild(textBlock);
-
-            this.chatBoxContainer.appendChild(msgBlock);
+            this.chatBoxContainer.prepend(msgBlock);
         },
 
         openSocket() {
             this.ws = new WebSocket("ws://localhost:8080/web/chat"); // По нажатию открыли сокет
             this.ws.onopen = () => this.onOpenSocket();
 
-            // this.ws.onmessage = (ev) => this.onMessage(JSON.parse(ev.data));
-            this.ws.onmessage = (ev) => this.onMessage();
+            this.ws.onmessage = (ev) => this.onMessage(JSON.stringify(ev.data));
             this.ws.onclose = () => this.onClose();
 
-            // this.name = this.nameInput.value;
             this.startBox.style.display = "none"; // После соединения прячем кнопку
             this.chatBox.style.display = "block"; // После соединения непрячем chatbox
         },

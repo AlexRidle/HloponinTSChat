@@ -61,12 +61,12 @@ public class ServerClient {
                 switch (message) {
                     case "/exit": {
                         exit = true;
-                        logger.info(userClient.getName() + "exit");
+                        logger.info(userClient.getName() + " exit");
                     }
                     break;
                     case "/leave": {
                         leave = true;
-                        logger.info(userClient.getName() + "leave");
+                        logger.info(userClient.getName() + " leave");
                     }
                     break;
                     default: {

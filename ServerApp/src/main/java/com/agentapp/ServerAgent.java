@@ -51,12 +51,12 @@ public class ServerAgent {
                 switch (message) {
                     case "/exit": {
                         exit = true;
-                        logger.info(userAgent.getName() + "exit");
+                        logger.info(userAgent.getName() + " exit");
                     }
                     break;
                     case "/leave": {
                         leave = true;
-                        logger.info(userAgent.getName() + "leave");
+                        logger.info(userAgent.getName() + " leave");
                     }
                     break;
                     default: {
