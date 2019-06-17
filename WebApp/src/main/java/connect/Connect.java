@@ -1,8 +1,6 @@
 package connect;
 
 import endpoints.ChatEndpoint;
-import jdk.nashorn.internal.objects.annotations.Setter;
-import message.Message;
 
 import java.io.*;
 import java.net.Socket;

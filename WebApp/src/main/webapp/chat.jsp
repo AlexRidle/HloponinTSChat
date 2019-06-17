@@ -3,10 +3,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>WebChatApp</title>
     <style>
         .chatbox {
-            /*display: none;*/
+            display: none;
         }
 
         .messages {
@@ -21,12 +21,6 @@
             margin-bottom: 5px;
             overflow: hidden;
         }
-
-        /*.messages .msg .from {*/
-        /*    background-color: antiquewhite;*/
-        /*    line-height: 30px;*/
-        /*    text-align: center;*/
-        /*}*/
 
         .messages .msg .text {
             padding: 10px;
@@ -79,7 +73,6 @@
 
         send(){ // Вызывает метод sendMessage и передает в него параметры
             this.sendMessage( this.msgTextArea.value);
-
         },
 
         sendMessage(msg) { // Отправляет сообщение
@@ -91,12 +84,12 @@
             let msgBlock = document.createElement("div");
             msgBlock.className = "msg";
 
-
             let textBlock = document.createElement("div");
             textBlock.className = "text";
             textBlock.innerText = msg;
 
             msgBlock.appendChild(textBlock);
+
             this.chatBoxContainer.prepend(msgBlock);
         },
 

@@ -3,7 +3,6 @@ package endpoints;
 import coders.MessageDecoder;
 import coders.MessageEncoder;
 import connect.Connect;
-import message.Message;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
