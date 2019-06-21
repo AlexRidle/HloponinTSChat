@@ -2,6 +2,7 @@ package com.clientapp;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.logging.Logger;
 
 public class Client {
 
@@ -14,19 +15,19 @@ public class Client {
     public Client(String host, int port) {
         this.host = host;
         this.port = port;
+        Logger logger = Logger.getLogger("ClientApp");
 
         try {
             socket = new Socket(host, port);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         } catch (IOException e) {
-            System.out.println("Connect with server failed");
-            e.printStackTrace();
+            logger.warning("Connect with server failed");
             System.exit(0);
         }
 
-        new Thread(new Send(socket, out)).start();  //Поток отсылки сообщения
-        new Thread(new Resive(socket, in)).start(); //Поток принятия сообщения
+        new Thread(new Send(socket, out, logger)).start();  //Поток отсылки сообщения
+        new Thread(new Resive(socket, in, logger)).start(); //Поток принятия сообщения
     }
 
 }

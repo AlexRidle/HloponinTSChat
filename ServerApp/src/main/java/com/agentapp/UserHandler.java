@@ -60,8 +60,7 @@ public class UserHandler implements Runnable {
             sb.append(line);
 
         } catch (IOException e) {
-            System.out.println("Error registration");
-            e.printStackTrace();
+            logger.warning("Error registration");
         }
         return sb.toString();
     }
@@ -92,8 +91,7 @@ public class UserHandler implements Runnable {
         try {
             socket.close();
         } catch (IOException e) {
-            System.out.println("Socket close");
-            e.printStackTrace();
+            logger.warning("Socket close");
         }
     }
 }

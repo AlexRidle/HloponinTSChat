@@ -8,15 +8,18 @@
   <component name="ChangeListManager">
     <list default="true" id="10c552c0-0ea0-400f-9cfe-b35507816b82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/ClientAgentStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/ClientAgentStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/ServerAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/ServerAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/ServerStart.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/ServerStart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/UserHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/ServerApp/target/classes/com/agentapp/UserHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/target/tomcat/logs/access_log.2019-06-17" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/target/tomcat/logs/access_log.2019-06-17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/target/tomcat/work/Tomcat/localhost/web/org/apache/jsp/chat_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/target/tomcat/work/Tomcat/localhost/web/org/apache/jsp/chat_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/target/tomcat/work/Tomcat/localhost/web/org/apache/jsp/chat_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/target/tomcat/work/Tomcat/localhost/web/org/apache/jsp/chat_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,7 +38,128 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="31" lean-forward="true" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Type.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Service.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,20 +184,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ClientWeb/src/ClientWem.java" />
-        <option value="$PROJECT_DIR$/ClientWeb/src/ClientWeb.java" />
-        <option value="$PROJECT_DIR$/Readme.md" />
-        <option value="$PROJECT_DIR$/ClientWeb/src/FirstServlet.java" />
         <option value="$PROJECT_DIR$/ClientWeb/web/index.jsp" />
         <option value="$PROJECT_DIR$/ClientWeb1/src/FirstServlet.java" />
         <option value="$PROJECT_DIR$/ClientWeb/web/firstJSP.jsp" />
         <option value="$PROJECT_DIR$/Readme.txt" />
-        <option value="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/logic/ServiceWeb.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/logic/User.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/logic/Model.java" />
         <option value="$PROJECT_DIR$/ClientWeb/web/register.jsp" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Service.java" />
         <option value="$PROJECT_DIR$/ClientWeb/src/MainServlet.java" />
         <option value="$PROJECT_DIR$/ClientWeb/web/WEB-INF/startForm.html" />
         <option value="$PROJECT_DIR$/ClientWeb/src/ServiceWeb.java" />
@@ -93,8 +211,6 @@
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/.idea/encodings.xml" />
         <option value="$PROJECT_DIR$/WebApp/pom.xml" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/message/Message.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/webapp/save.jsp" />
         <option value="$PROJECT_DIR$/WebApp/src/main/webapp/chat.css" />
@@ -107,10 +223,18 @@
         <option value="$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java" />
         <option value="$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp" />
-        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ServerApp/pom.xml" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java" />
         <option value="$PROJECT_DIR$/ClientApp/pom.xml" />
+        <option value="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/ClientAgentStart.java" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Service.java" />
+        <option value="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java" />
+        <option value="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java" />
+        <option value="$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java" />
+        <option value="$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java" />
       </list>
     </option>
   </component>
@@ -169,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,12 +301,115 @@
               <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clientapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agentapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TouchSoftLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TouchSoftLab" type="462c0819:PsiDirectoryNode" />
+              <item name="WebApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +502,8 @@
       <workItem from="1560606334354" duration="3692000" />
       <workItem from="1560616427995" duration="36621000" />
       <workItem from="1560780300324" duration="255000" />
-      <workItem from="1560784166886" duration="1191000" />
+      <workItem from="1560784166886" duration="4732000" />
+      <workItem from="1561112708945" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="Create modules&#10;add Type">
       <created>1559649127795</created>
@@ -294,7 +523,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72589000" />
+    <option name="totallyTimeSpent" value="78365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -304,16 +533,17 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.67951804" visible="true" weight="0.19170243" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.67951804" visible="true" weight="0.22174536" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Web" order="7" sideWeight="0.32048193" side_tool="true" weight="0.21244635" />
+      <window_info anchor="bottom" id="Log4jMonitor" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.40963855" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -325,7 +555,7 @@
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2546495" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.24964234" />
@@ -497,148 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/ClientAgentStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="60" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -649,20 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java">
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/coders/MessageEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="195">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -681,8 +759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/endpoints/ChatEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="244">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#637#638#0" expanded="true" />
@@ -691,10 +769,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/java/connect/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/src/main/webapp/chat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/ClientAgentStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Resive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/main/java/com/clientapp/Send.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="31" lean-forward="true" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/ServerStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserAgent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#540#541#0" expanded="true" />
@@ -711,6 +927,16 @@
             <element signature="imports" expanded="true" />
             <element signature="e#622#623#0" expanded="true" />
             <element signature="e#651#652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerApp/src/main/java/com/agentapp/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

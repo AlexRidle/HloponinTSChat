@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.util.logging.Logger;
 
 public class Send implements Runnable {
 
@@ -12,10 +13,12 @@ public class Send implements Runnable {
     private BufferedWriter out;
     private BufferedReader inConsole;
     private String message;
+    private Logger logger;
 
-    public Send(Socket socket, BufferedWriter out) {
+    public Send(Socket socket, BufferedWriter out, Logger logger) {
         this.socket = socket;
         this.out = out;
+        this.logger = logger;
         inConsole = new BufferedReader(new InputStreamReader(System.in));
     }
 
@@ -26,7 +29,7 @@ public class Send implements Runnable {
             try {
                 message = inConsole.readLine();
             } catch (IOException e) {
-                System.out.println("Input your message - error");
+                logger.warning("Input your message - error");
                 e.printStackTrace();
                 System.exit(0);
             }
@@ -43,26 +46,24 @@ public class Send implements Runnable {
     }
 
     //Метод отправляет сообщение на сервер введенное с консоли
-
     public void send(String message, BufferedWriter out) {
         try {
             out.write(message + "\r\n");
             out.flush();
         } catch (IOException e) {
-            System.out.println("Error while sending");
+            logger.warning("Error while sending");
             e.printStackTrace();
         }
     }
 
     // Метод закрывает сокет
-
     public void close() {
         if (!socket.isClosed()) {
             try {
                 socket.close();
                 System.exit(0);
             } catch (IOException e) {
-                System.out.println("Error closing socket");
+                logger.warning("Error closing socket");
                 e.printStackTrace();
             }
         }
