@@ -4,6 +4,9 @@ import java.io.*;
 import java.net.Socket;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class Client {
 
     private Socket socket;
@@ -27,7 +30,7 @@ public class Client {
         }
 
         new Thread(new Send(socket, out, logger)).start();  //Поток отсылки сообщения
-        new Thread(new Resive(socket, in, logger)).start(); //Поток принятия сообщения
+        new Thread(new Receive(socket, in, logger)).start(); //Поток принятия сообщения
     }
 
 }

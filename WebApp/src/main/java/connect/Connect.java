@@ -6,7 +6,9 @@ import java.io.*;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-
+/**
+ * @author Paul Hloponin
+ */
 public class Connect extends Thread {
     private static String host = "localhost";
     private static int port = 2121;
@@ -36,14 +38,14 @@ public class Connect extends Thread {
                     close();
                     break;
                 }
-                chatEndpoint.sendEndpoint(message);
+                chatEndpoint.sendToWeb(message);
             } catch (IOException e) {
                 logger.info(e.getMessage());
             }
         }
     }
 
-    public void send(String message) {
+    public void sendToServer(String message) {
         try {
             out.write(message + "\r\n");
             out.flush();

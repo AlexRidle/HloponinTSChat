@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class Send implements Runnable {
 
     private Socket socket;

@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.net.Socket;
 
+/**
+ * @author Paul Hloponin
+ */
 public class UserAgent {
     private Socket socket;
     private String name;

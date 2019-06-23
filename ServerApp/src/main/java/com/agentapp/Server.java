@@ -5,17 +5,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-
+/**
+ * @author Paul Hloponin
+ */
 public class Server {
 
     private ServerSocket serverSocket;
     private Service service;
-    private int port;
     Logger logger = Logger.getLogger(Server.class.getName());
 
 
     public Server(int port) {
-        this.port = port;
         this.service = new Service();
         try {
             serverSocket = new ServerSocket(port);
@@ -25,10 +25,10 @@ public class Server {
             e.printStackTrace();
             System.exit(0);
         }
-        run();
+        startNewConnect();
     }
 
-    public void run() {
+    public void startNewConnect() {
         while (true) {
             Socket socket = newConnect();
             if (socket != null) {
@@ -36,7 +36,7 @@ public class Server {
                     UserHandler userHandler = new UserHandler(socket, service);
                     new Thread(userHandler).start();
                 } catch (IOException e) {
-                    System.out.println(e.getStackTrace() + " <-- Server.run ");
+                    logger.warning(e.getMessage());
                 }
             }
         }
@@ -49,7 +49,6 @@ public class Server {
             System.out.println("socket accept");
         } catch (IOException e) {
             logger.info("Connect failed with client");
-            System.out.println(e.getStackTrace());
         }
         return socket;
     }

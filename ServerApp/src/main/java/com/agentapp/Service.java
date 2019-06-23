@@ -6,6 +6,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class Service {
 
     private Queue<ServerAgent> agents;

@@ -7,6 +7,9 @@ import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * @author Paul Hloponin
+ */
 public class UserClient {
 
     private Socket socket;

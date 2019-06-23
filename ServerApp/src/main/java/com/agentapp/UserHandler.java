@@ -2,9 +2,13 @@ package com.agentapp;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class UserHandler implements Runnable {
     private Socket socket;
     private Service service;
@@ -13,7 +17,7 @@ public class UserHandler implements Runnable {
     private static Logger logger = Logger.getLogger(UserHandler.class.getName());
 
 
-    UserHandler(Socket socket, Service service) throws IOException {
+    public UserHandler(Socket socket, Service service) throws IOException {
         this.socket = socket;
         this.service = service;
         in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
@@ -22,7 +26,7 @@ public class UserHandler implements Runnable {
     }
 
     public void run() {
-        HashMap<String, String> map = turnStringToMap(register(in));
+        Map<String, String> map = turnStringToMap(register(in));
         String name;
         if (map.get("type").equalsIgnoreCase(Type.CLIENT.toString())) {
             name = map.get("name");
@@ -37,27 +41,27 @@ public class UserHandler implements Runnable {
     }
 
     private String register(BufferedReader in) {
-        String line;
+        String input;
         StringBuilder sb = new StringBuilder();
         send("Please write : /register", out);
 
         try {
-            line = in.readLine();
-            line.equals("/register");
-            while (!line.equals("/register")) {
+            input = in.readLine();
+            input.equals("/register");
+            while (!input.equals("/register")) {
                 send("Try again, write : /register", out);
-                line = in.readLine();
+                input = in.readLine();
             }
             send("Please write your type : you are agent or client", out);
-            line = in.readLine();
-            while (!line.equalsIgnoreCase("agent") && !line.equalsIgnoreCase("client")) {
+            input = in.readLine();
+            while (!input.equalsIgnoreCase("agent") && !input.equalsIgnoreCase("client")) {
                 send("Try again, write : you are agent or client", out);
-                line = in.readLine();
+                input = in.readLine();
             }
-            sb.append(line + " ");
+            sb.append(input + " ");
             send("Please, enter your name...", out);
-            line = in.readLine();
-            sb.append(line);
+            input = in.readLine();
+            sb.append(input);
 
         } catch (IOException e) {
             logger.warning("Error registration");

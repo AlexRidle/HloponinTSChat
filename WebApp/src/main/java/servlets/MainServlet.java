@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Paul Hloponin
+ */
 @WebServlet("")
 public class MainServlet extends HttpServlet {
 

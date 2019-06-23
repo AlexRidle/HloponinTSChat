@@ -9,6 +9,9 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 @ServerEndpoint(value = "/chat", decoders = {MessageDecoder.class}, encoders = {MessageEncoder.class})
 public class ChatEndpoint {
 
@@ -40,14 +43,14 @@ public class ChatEndpoint {
     public void onMessage(Session session, String message) {
         try {
             if (applyconnect) {
-                connect.send(message);
+                connect.sendToServer(message);
             } else register();
         } catch (IOException e) {
             logger.info(e.getMessage());
         }
     }
 
-    public void sendEndpoint(String message) {
+    public void sendToWeb(String message) {
         try {
             session.getBasicRemote().sendText(message);
         } catch (IOException e) {

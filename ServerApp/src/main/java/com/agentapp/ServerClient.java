@@ -3,6 +3,9 @@ package com.agentapp;
 import java.io.*;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class ServerClient {
 
     private UserClient userClient;

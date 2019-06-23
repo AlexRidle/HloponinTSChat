@@ -5,6 +5,9 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+/**
+ * @author Paul Hloponin
+ */
 public class ServerAgent {
 
     private UserAgent userAgent;

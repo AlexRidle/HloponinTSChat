@@ -5,13 +5,16 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-public class Resive implements Runnable {
+/**
+ * @author Paul Hloponin
+ */
+public class Receive implements Runnable {
 
     private Socket socket;
     private BufferedReader in;
     private Logger logger;
 
-    public Resive(Socket socket, BufferedReader in, Logger logger) {
+    public Receive(Socket socket, BufferedReader in, Logger logger) {
         this.socket = socket;
         this.in = in;
         this.logger = logger;
