@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 /**
  * @author Paul Hloponin
  */
-public class Receive implements Runnable {
+public class Receive implements Runnable {//Wrong name of class, must be a noun. Better to name it like "MessageReceiver".
 
     private Socket socket;
     private BufferedReader in;
@@ -23,16 +23,16 @@ public class Receive implements Runnable {
     //Принимаем сообщение с сервера
     public void run() {
         while (!socket.isClosed()) {
-            String inMessage = null;
+            String inMessage = null;//Suspicious name of variable. Maybe receivedMessage?
             try {
                 inMessage = in.readLine();
                 System.out.println(inMessage);
             } catch (IOException e) {
-                logger.warning("Connect failed");
+                logger.warning("Connect failed");//Why do we not logging stack trace?
                 close();
             }
             if (inMessage == null) {
-                logger.warning("Server failed");
+                logger.warning("Server failed");//Why do we not logging stack trace?
                 close();
             }
         }
@@ -44,7 +44,7 @@ public class Receive implements Runnable {
             try {
                 socket.close();
             } catch (IOException e) {
-                logger.warning("Error closing socket");
+                logger.warning("Error closing socket");//Why do we not logging stack trace?
             }
         }
     }
