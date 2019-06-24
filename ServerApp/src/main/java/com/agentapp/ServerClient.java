@@ -1,6 +1,6 @@
 package com.agentapp;
 
-import java.io.*;
+import java.io.*;//Do not import all classes.
 import java.util.logging.Logger;
 
 /**
@@ -8,14 +8,18 @@ import java.util.logging.Logger;
  */
 public class ServerClient {
 
+    //This class is very similar to ServerAgent.
+    //Why not to create a "User" class and not extend it?
+
     private UserClient userClient;
-    private UserHandler userHandler;
+    private UserHandler userHandler;//This value is never accessed.
     private Service service;
     private BufferedReader in;
     private BufferedWriter out;
-    private boolean exit;
-    private boolean leave;
+    private boolean exit;//Suspicious name of variable.
+    private boolean leave;//Suspicious name of variable.
 
+    //Formatting. This empty line is not need here.
     private ServerAgent serverAgent;
     private static Logger logger = Logger.getLogger(ServerClient.class.getName());
     public ServerClient(UserClient userClient, UserHandler userHandler, Service service) {
@@ -28,18 +32,18 @@ public class ServerClient {
         try {
             in = userClient.getIn();
             out = userClient.getOut();
-            while (!userClient.getSocket().isClosed()&& !exit) {
+            while (!userClient.getSocket().isClosed()&& !exit) {//Formatting
                 String message = in.readLine();
                 if (message.equals("/exit")) {
-                    logger.info(String.format("Client : \"%s\" exit", userClient.getName()));
-                    exit=true;
+                    logger.info(String.format("Client : \"%s\" exit", userClient.getName()));//Better to use String.format method. Formatting.
+                    exit=true;//Formatting.
                 } else {
                     userClient.addMessage(message + " -- " + userClient.getName());
                     out.write("Поиск свободных агентов...\n");
                     out.flush();
                     service.connect(this);
                     talk();
-                    if(leave){
+                    if(leave){//Formatting.
                         leave = false;
                         service.removeAgent(this);
                     }
@@ -55,6 +59,8 @@ public class ServerClient {
         return serverAgent;
     }
 
+    //Access can be private.
+    //Suspicious name of method. Must be renamed and be a verb.
     public void talk() {
         try {
             in = userClient.getIn();
@@ -63,7 +69,7 @@ public class ServerClient {
 
                 switch (message) {
                     case "/exit": {
-                        exit = true;
+                        exit = true;//Better to use marker and break while without a new variable.
                         logger.info(userClient.getName() + " exit");
                     }
                     break;
@@ -78,13 +84,13 @@ public class ServerClient {
                             serverAgent.getUserAgent().getOut().flush();
                         } else userClient.addMessage(message + " -- " + userClient.getName());
                     }
-                    break;
+                    break;//Do we need this break here?
                 }
 
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace();//Stack trace is not logged.
         }
     }
 
