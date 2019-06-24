@@ -9,11 +9,11 @@ import java.util.logging.Logger;
 /**
  * @author Paul Hloponin
  */
-public class Service {
+public class Service {//Suspicious name of class. Not clear what the service.
 
     private Queue<ServerAgent> agents;
     private static Logger logger = Logger.getLogger(Service.class.getName());
-    private boolean wait;
+    private boolean wait;//This value is never accessed.
 
 
     public Service() {
@@ -43,13 +43,14 @@ public class Service {
         agents.add(serverAgent);
         serverAgent.setLeave(true);
         serverClient.setServerAgent(null);
-    }
-    public void removeClient(ServerAgent serverAgent){
+    }//Formatting.
+    public void removeClient(ServerAgent serverAgent){//Formatting.
         ServerClient serverClient = serverAgent.getServerClient();
         serverClient.setLeave(true);
 
     }
 
+    //Better to move this method to another runnable class.
     public void connect(ServerClient serverClient) {
         Runnable runnable = () -> {
             ServerAgent serverAgent = getAgent();
