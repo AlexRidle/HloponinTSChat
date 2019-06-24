@@ -6,6 +6,6 @@ package com.agentapp;
  */
 public class ServerStart {
     public static void main(String[] args) {
-        new Server(2121);
+        new Server(2121);//Port should be located in properties file.
     }
 }
