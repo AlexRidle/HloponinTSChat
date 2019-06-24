@@ -1,6 +1,6 @@
 package com.agentapp;
 
-import java.io.*;
+import java.io.*;//Do not import all classes. Import only what you need.
 import java.net.Socket;
 import java.util.Map;
 import java.util.HashMap;
@@ -28,7 +28,7 @@ public class UserHandler implements Runnable {
     public void run() {
         Map<String, String> map = turnStringToMap(register(in));
         String name;
-        if (map.get("type").equalsIgnoreCase(Type.CLIENT.toString())) {
+        if (map.get("type").equalsIgnoreCase(Type.CLIENT.toString())) {//Better to compare with agent, in my opinion.
             name = map.get("name");
             service.newClient(this, name, in, out);
             logger.info("New client : " + name);
@@ -47,7 +47,7 @@ public class UserHandler implements Runnable {
 
         try {
             input = in.readLine();
-            input.equals("/register");
+            input.equals("/register");//Result of equals is ignored. This line is useless.
             while (!input.equals("/register")) {
                 send("Try again, write : /register", out);
                 input = in.readLine();
@@ -64,14 +64,14 @@ public class UserHandler implements Runnable {
             sb.append(input);
 
         } catch (IOException e) {
-            logger.warning("Error registration");
+            logger.warning("Error registration");//Not sure that we need log this thing. Better to log a stack trace.
         }
         return sb.toString();
     }
 
     private HashMap<String, String> turnStringToMap(String message) {
-        HashMap<String, String> map = new HashMap<String, String>();
-        String[] mass = message.split(" ");
+        HashMap<String, String> map = new HashMap<String, String>();//Suspicious name of variable.
+        String[] mass = message.split(" ");//Suspicious name of variable.
         map.put("type", mass[0]);
         map.put("name", mass[1]);
         return map;
@@ -86,7 +86,7 @@ public class UserHandler implements Runnable {
         try {
             out.write(message + "\n");
             out.flush();
-        } catch (IOException e) {
+        } catch (IOException e) {//Exception is not logging.
             close(socket);
         }
     }
@@ -95,7 +95,7 @@ public class UserHandler implements Runnable {
         try {
             socket.close();
         } catch (IOException e) {
-            logger.warning("Socket close");
+            logger.warning("Socket close");//Why do we not logging a stack trace?
         }
     }
 }
