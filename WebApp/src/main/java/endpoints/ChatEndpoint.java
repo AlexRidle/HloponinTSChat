@@ -4,7 +4,7 @@ import coders.MessageDecoder;
 import coders.MessageEncoder;
 import connect.Connect;
 
-import javax.websocket.*;
+import javax.websocket.*;//Do not import all classes from package. Import only what you need.
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -16,8 +16,8 @@ import java.util.logging.Logger;
 public class ChatEndpoint {
 
     private static Logger logger = Logger.getLogger("WebApp");
-    private boolean applyconnect = false;
-    private Session session = null;
+    private boolean applyconnect = false;//Not clear why do we need this variable.
+    private Session session = null;//Unnecessary variable.
     private Connect connect;
 
 
@@ -44,12 +44,13 @@ public class ChatEndpoint {
         try {
             if (applyconnect) {
                 connect.sendToServer(message);
-            } else register();
+            } else register();//Formatting. Better to use brackets {} to increase code readability.
         } catch (IOException e) {
             logger.info(e.getMessage());
         }
     }
 
+    //This two methods (register and sendToWeb) must be located in different service class.
     public void sendToWeb(String message) {
         try {
             session.getBasicRemote().sendText(message);
@@ -61,7 +62,7 @@ public class ChatEndpoint {
     private void register() throws IOException {
         connect = new Connect(this, logger);
         connect.start();
-        applyconnect = true;
+        applyconnect = true;//Formatting. New word in variable must be written from capital letter.
     }
 
 }
