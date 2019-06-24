@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 /**
  * @author Paul Hloponin
  */
-public class Send implements Runnable {
+public class Send implements Runnable {//Wrong name of class, must be a noun. Better to name it like "MessageSender".
 
     private Socket socket;
     private BufferedWriter out;
@@ -32,13 +32,14 @@ public class Send implements Runnable {
             try {
                 message = inConsole.readLine();
             } catch (IOException e) {
-                logger.warning("Input your message - error");
-                e.printStackTrace();
+                logger.warning("Input your message - error");//Strange message. Also must be shown to user, not logged.
+                e.printStackTrace();//Why do we showing stack trace to user? It must be logged.
                 System.exit(0);
             }
             if (message == null) {
                 close();
                 break;
+            //Code duplicate. Better to add second statement to first "if".
             } else if (message.equalsIgnoreCase("/exit")) {
                 close();
                 break;
@@ -54,8 +55,8 @@ public class Send implements Runnable {
             out.write(message + "\r\n");
             out.flush();
         } catch (IOException e) {
-            logger.warning("Error while sending");
-            e.printStackTrace();
+            logger.warning("Error while sending");//Message must be shown to user, not logged.
+            e.printStackTrace();//Why do we showing stack trace to user? It must be logged.
         }
     }
 
@@ -66,8 +67,8 @@ public class Send implements Runnable {
                 socket.close();
                 System.exit(0);
             } catch (IOException e) {
-                logger.warning("Error closing socket");
-                e.printStackTrace();
+                logger.warning("Error closing socket");//Message must be shown to user, not logged.
+                e.printStackTrace();//Why do we showing stack trace to user? It must be logged.
             }
         }
     }
