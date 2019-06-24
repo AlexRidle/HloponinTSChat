@@ -7,6 +7,9 @@ import java.net.Socket;
 /**
  * @author Paul Hloponin
  */
+
+//UserClient and UserAgent is 99% similar. Why not to create User class and extend it?
+
 public class UserAgent {
     private Socket socket;
     private String name;
