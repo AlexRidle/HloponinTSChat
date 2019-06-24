@@ -10,6 +10,9 @@ import java.util.Queue;
 /**
  * @author Paul Hloponin
  */
+
+//UserClient and UserAgent is 99% similar. Why not to create User class and extend it?
+
 public class UserClient {
 
     private Socket socket;
