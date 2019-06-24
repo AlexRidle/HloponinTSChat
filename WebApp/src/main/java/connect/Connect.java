@@ -2,14 +2,15 @@ package connect;
 
 import endpoints.ChatEndpoint;
 
-import java.io.*;
+import java.io.*;//Do not import all classes.
 import java.net.Socket;
 import java.util.logging.Logger;
 
 /**
  * @author Paul Hloponin
  */
-public class Connect extends Thread {
+public class Connect extends Thread {//Suspicious name of class and package. Can be named like ServerService or something like that.
+    //Host and port should be located in properties file. Also this variables can be converted to local.
     private static String host = "localhost";
     private static int port = 2121;
     private static Logger logger;
@@ -50,26 +51,26 @@ public class Connect extends Thread {
             out.write(message + "\r\n");
             out.flush();
         } catch (IOException e) {
-            logger.info(e.getMessage());
+            logger.info(e.getMessage());//Why do we not logging stack trace?  Also logging type myst be an error, not info.
         }
     }
 
 
-    private void close() {
+    private void close() {//Better to name it like close Socket.
         logger.info("close this : " + chatEndpoint);
         try {
             if (!socket.isClosed()) {
                 socket.close();
             }
             if (in == null) {
-                in.close();
+                in.close();//close method may produce null pointer exception. You need to add second catch block for it.
             }
             if (out == null) {
-                out.close();
+                out.close();//Same mistake on Line 66.
             }
         } catch (IOException e) {
-            logger.info(e.getMessage());
+            logger.info(e.getMessage());//Why do we not logging stack trace?  Also logging type myst be an error, not info.
 
-        }
+        }//Formatting (We don't need empty line here.)
     }
 }
