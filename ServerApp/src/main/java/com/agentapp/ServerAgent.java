@@ -8,17 +8,17 @@ import java.util.logging.Logger;
 /**
  * @author Paul Hloponin
  */
-public class ServerAgent {
+public class ServerAgent {//Suspicious name of class.
 
     private UserAgent userAgent;
-    private UserHandler userHandler;
+    private UserHandler userHandler;//This value is never accessed.
     private Service service;
     private ServerClient serverClient;
     private BufferedReader in;
     private BufferedWriter outAgent;
     private BufferedWriter outClient;
-    private boolean exit;
-    private boolean leave;
+    private boolean exit;//Suspicious name of variable.
+    private boolean leave;//Suspicious name of variable.
     private static Logger logger = Logger.getLogger(ServerAgent.class.getName());
 
     public ServerAgent(UserAgent userAgent, UserHandler userHandler, Service service) {
@@ -35,7 +35,7 @@ public class ServerAgent {
         this.leave = leave;
     }
 
-    public void talk() {
+    public void talk() {//Suspicious name of method. Must be renamed and be a verb.
         try {
             in = userAgent.getIn();
             outAgent = userAgent.getOut();
@@ -43,7 +43,7 @@ public class ServerAgent {
             leave = false;
             exit = false;
 
-            outClient.write("К вам подключился агент : " + userAgent.getName()+ "\n");
+            outClient.write("К вам подключился агент : " + userAgent.getName()+ "\n");//Better to use String.format method. Formatting.
             outClient.flush();
             outAgent.write(serverClient.getUserClient().getMemoryMessage().toString() + "\n");
             outAgent.flush();
@@ -53,28 +53,28 @@ public class ServerAgent {
 
                 switch (message) {
                     case "/exit": {
-                        exit = true;
+                        exit = true;//Better to use marker and break while without a new variable.
                         logger.info(userAgent.getName() + " exit");
                     }
                     break;
                     default: {
-                        outClient.write("agent " + userAgent.getName() + " -> " + message + "\n");
+                        outClient.write("agent " + userAgent.getName() + " -> " + message + "\n");//Better to use String.format method.
                         outClient.flush();
                     }
-                    break;
+                    break;//Do we need this break here?
                 }
 
             }
             service.removeClient(this);
-            if(exit){
+            if(exit){//Formatting
                 service.terminate();
             }
-            if (leave){
+            if (leave){//Formatting
                 service.addAgents(this);
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace();//Stack trace is not logged.
         }
     }
 
